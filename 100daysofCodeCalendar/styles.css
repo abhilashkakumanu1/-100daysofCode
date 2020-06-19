@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+:root{
+    --height: 200px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Lato;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+h1{
+    margin: 100px;
+}
+.calendar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.month{
+    padding: 10px;
+
+    /* border: 1px solid red; */
+}
+@media only screen and (min-width: 480px){
+    .month{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .month{
+        width: 33%;
+    }
+}
+h3{
+    margin: 10px;
+}
+.week-days-container span, 
+.day {
+    width: calc(100% / 7);
+    height: calc(var(--height) / 7);
+    margin-bottom: 5px;;
+}
+
+.week-days-container{
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.days-container{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10px;
+}
+.day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: grey;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.15s;
+}
+
+.circle:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/*------------- Contact ----------------*/
+.contact-btn{
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    color: white;
+    background-color:#00BF68;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    transition: all 0.15s;
+}
+.contact-btn:hover{
+    background-color: white;
+    color: black;
+    animation: slideContent 1s;
+}
+i{
+    font-size: 50px;;
+}
+i:hover{
+    color: green;
+}
+
+/*------------- Elements to animate ----------------*/
+
+
+/*------------- Animation ----------------*/
+@keyframes slideContact{
+    from{
+        transform: translateX();
+    }
+}
